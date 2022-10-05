@@ -17,19 +17,16 @@ def random_list(min, max, count):
 
 
 def diff_min_max(new_list: list):
+    min = 0.99
+    max = 0.00
     for i in range(len(new_list)):
         new_list[i] = round((new_list[i] % 1), 2)
-    min = new_list[0]
-    max = new_list[0]
-    for i in range(1, len(new_list)):
         if new_list[i] < min:
             min = new_list[i]
         elif new_list[i] > max:
             max = new_list[i]
     diff = round((max-min), 2)
-    print(min)
-    print(max)
-    print(diff)
+    print(f'Min: {min}, Max: {max}. Difference: {diff}')
 
 
 c = int(input('enter count of numbers:'))
