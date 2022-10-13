@@ -9,19 +9,17 @@ from random import randint
 
 
 def candy_game(num: int, player_1, player_2):
-
     player = randint(1, 3)
     if player == 1:
         player = player_1
     else:
         player = player_2
-    max_count = 28
     while True:
         count = int(input(f"{player}, enter count of candies: "))
-        if 0 < count <= max_count and count <= num:
+        if 0 < count <= 28 and count <= num:
             num -= count
             if num == 0:
-                print(f'Win {player}')
+                break
             else:
                 print(f"candy's balance is {num}")
                 if player == player_1:
@@ -30,9 +28,10 @@ def candy_game(num: int, player_1, player_2):
                     player = player_1
         else:
             print('incorrect number')
+    print(f'{player}Win!')
 
 
-#candy_game(121, 'aaa', 'bbb')
+#candy_game(121, 'Person', 'Human')
 
 
 def bot_strategy(a, n, c):

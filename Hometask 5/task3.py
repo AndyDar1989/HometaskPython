@@ -1,8 +1,6 @@
 # 3. Создайте программу для игры в "Крестики-нолики". Поле 3x3. Игрок - игрок, без бота.
 
 
-
-
 board = list(map(str, range(1, 10)))
 
 
@@ -13,9 +11,7 @@ def play_board():
             print(f'{board[j+i*3]:^5}', end=' ')
         print(f"\n{'-'*20}")
     print()
-    
 
-    
 
 def place_sign(sign):
     global board
