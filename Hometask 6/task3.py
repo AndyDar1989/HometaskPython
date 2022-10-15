@@ -8,11 +8,10 @@
 from itertools import groupby
 
 
-
-
-    
 def new_dictionary(*name_set):
-    print ({letter: list(names) for letter, names in groupby(sorted(name_set), key = lambda i: i[0])if letter})   
-    
-    
-new_dictionary("Иван", "Мария", "Петр", "Илья", "Марина", "Петр", "Алина", "Бибочка")    
+    print({letter: list(names) for letter, names in groupby(
+        sorted(name_set), key=lambda i: i[0])if letter})
+
+
+new_dictionary("Иван", "Мария", "Петр", "Илья",
+               "Марина", "Петр", "Алина", "Бибочка")
